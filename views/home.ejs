@@ -1,0 +1,26 @@
+<html lang="en">
+	<head>
+		<%- include('partials/meta') %>
+
+		<title>f2reninj5</title>
+		<icon src="images/logo.svg"></icon>
+	</head>
+
+	<body>
+		
+		<%- include('partials/header') %>
+
+		<!-- <form method="POST" action="/"><input type="submit"></form> -->
+
+		<div class="container">
+
+			<h1 style="font-size: 100px;">GET OUT</h1>
+			<p><%= 'GET OUT '.repeat(1000) %></p>
+		</div>
+
+		<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+
+			if (!window.jQuery) { document.write('<script defer src="scripts/jquery/dist/jquery.js"><\/script>') }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+@font-face {
+
+    font-family: "Ubuntu Mono";
+    src: url("fonts/Ubuntu_Mono/Regular.ttf");
+}
+
+@font-face {
+
+    font-family: "Ubuntu Mono";
+    src: url("fonts/Ubuntu_Mono/Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+
+    font-family: "Ubuntu Mono";
+    src: url("fonts/Ubuntu_Mono/Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+
+    font-family: "Ubuntu Mono";
+    src: url("fonts/Ubuntu_Mono/BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+* {
+
+	font-family: Ubuntu Mono;
+}
+
+body {
+
+	margin: 0;
+}
+
+header, footer {
+
+	background-color: salmon;
+	padding: 1vw;
+}
+
+header *, footer * {
+
+	display: inline-block;
+	vertical-align: middle;
+}
+
+header ul {
+
+	list-style-type: none;
+	margin: 0;
+}
+
+li a {
+
+	display: block;
+	width: 10vw;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	padding: 1vw;
+	background-color: indianred;
+	border-radius: 0.1em;
+}
+
+li a:hover {
+
+	background-color: white;
+	color: indianred;
+}
+
+.container {
+
+	margin: 4em 4vw 4em 4vw;
+	padding: 1em;
+
+	background-color: salmon;
+	color: white;
+
+	border-radius: 1em;
+}
