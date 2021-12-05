@@ -1,11 +1,17 @@
 
-// https://colorhunt.co/palette/4205167d1935b42b51e63e6d
 // https://youtu.be/AryZSCeKU9Y
 
+const fn = require('f2reninj5')
+const path = require('path')
 const express = require('express')
 const app = express()
 
 app.use(express.static('public'))
+app.use((request, response, next) => {
+
+	response.locals.partialsDir = path.resolve(__dirname, './views/partials')
+	next()
+})
 
 app.set('view engine', 'ejs')
 
@@ -25,10 +31,7 @@ app.get('/projects', (request, response) => {
 	response.render('projects')
 })
 
-app.get('/blog', (request, response) => {
-
-	response.render('blog')
-})
+app.use('/blog', require('./routes/blog'))
 
 app.get('/contact', (request, response) => {
 
