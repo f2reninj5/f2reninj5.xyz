@@ -74,6 +74,10 @@ li a:hover {
 
 .container {
 
+	display: grid;
+	grid-auto-rows: 1fr;
+	row-gap: 1em;
+
 	margin: 4em 4vw 4em 4vw;
 	padding: 1em;
 
@@ -81,4 +85,56 @@ li a:hover {
 	color: white;
 
 	border-radius: 1em;
+}
+
+.post-preview{
+
+	padding: 1em;
+
+	background-color: white;
+	color: black;
+
+	border-radius: 0.5em;
+}
+
+.post-preview * {
+
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.post-preview .title {
+
+	font-size: 2em;
+	text-decoration: none;
+}
+
+.post-preview .title:visited {
+
+	color: salmon;
+}
+
+.post-preview .title:hover {
+
+	color: indianred;
+}
+
+.post-preview .brief, .post-preview .details {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2em;
+}
+
+.post-preview .brief .titles {
+
+	display: grid;
+}
+
+.post-preview .brief .tags {
+
+	display: grid;
+	flex: 1;
 }

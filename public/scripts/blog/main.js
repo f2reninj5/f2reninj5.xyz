@@ -1,8 +1,5 @@
 
-$('button').on('click', () => {
+$(() => {
 
-    $.get('/blog/posts/fetchpost', (result) => {
-
-        $('body').append(result)
-    })
+    $('div').load('/blog/posts/fetchpostdetails')
 })

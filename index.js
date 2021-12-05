@@ -1,7 +1,6 @@
 
 // https://youtu.be/AryZSCeKU9Y
 
-const fn = require('f2reninj5')
 const path = require('path')
 const express = require('express')
 const app = express()

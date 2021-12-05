@@ -8,16 +8,19 @@ router.get('/', (request, response) => {
 	response.render('blog/main')
 })
 
-router.get('/posts/fetchpost', async (request, response) => {
+router.get('/posts/fetchpostdetails', async (request, response) => {
 
-	let row = (await fn.queryPool('SELECT * FROM blogs WHERE id = 1'))[0]
+	let posts = await fn.queryPool('SELECT id, title, subtitle, created_at, views FROM blogs ORDER BY created_at DESC')
 
-	response.render('blog/posts/fetchpost', {
+	response.render('blog/posts/fetchpostdetails', {
 
-		title: row.title,
-		subtitle: row.subtitle,
-		content: row.content
+		posts: posts
 	})
+})
+
+router.get('/posts/:id', (request, response) => {
+
+	response.send(request.params.id)
 })
 
 module.exports = router
