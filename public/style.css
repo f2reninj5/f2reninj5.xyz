@@ -66,17 +66,27 @@ li a {
 	border-radius: 0.1em;
 }
 
-li a:hover {
+/* header */
+
+#skip-navigation {
+
+	position: absolute;
+	filter: opacity(0%);
+	transition: 500ms;
+}
+
+#skip-navigation:focus {
+
+	filter: opacity(100%);
+}
+
+header li a:hover {
 
 	background-color: white;
 	color: indianred;
 }
 
-.container {
-
-	display: grid;
-	grid-auto-rows: 1fr;
-	row-gap: 1em;
+.container, .row-container {
 
 	margin: 4em 4vw 4em 4vw;
 	padding: 1em;
@@ -85,6 +95,13 @@ li a:hover {
 	color: white;
 
 	border-radius: 1em;
+}
+
+.row-container {
+
+	display: grid;
+	grid-auto-rows: 1fr;
+	row-gap: 1em;
 }
 
 .post-preview{
@@ -108,6 +125,7 @@ li a:hover {
 
 	font-size: 2em;
 	text-decoration: none;
+	color: black;
 }
 
 .post-preview .title:visited {
@@ -137,4 +155,10 @@ li a:hover {
 
 	display: grid;
 	flex: 1;
+}
+
+*::selection {
+
+	color: white;
+	background-color: indianred;
 }

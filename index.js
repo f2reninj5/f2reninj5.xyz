@@ -42,7 +42,7 @@ app.get('/about', (request, response) => {
 	response.render('about')
 })
 
-let server = app.listen(3000, () => {
+let server = app.listen(80, () => {
 
-	console.log('Listening at http://localhost:3000.')
+	console.log(`Listening at http://localhost.`)
 })

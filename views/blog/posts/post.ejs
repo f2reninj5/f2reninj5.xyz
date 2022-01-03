@@ -1,0 +1,17 @@
+<html lang="en">
+	<head>
+		<%- include(`${partialsDir}/meta`) %>
+
+		<title>Blog | f2reninj5</title>
+	</head>
+
+	<body>
+
+		<%- include(`${partialsDir}/header`) %>
+
+		<h1><%= locals.post.title %></h1>
+		<h2><%= locals.post.subtitle %></h2>
+		<h4><%= locals.post.views %> views<br>Created at <%= locals.post.created_at.toLocaleDateString() %> <%= locals.post.created_at.toLocaleTimeString() %></h4>
+		<p><%= locals.post.content %></p>
+	</body>
+</html>

@@ -1,6 +1,6 @@
 
 const { sql } = require('../tokens.json')
-const mysql = require('mysql')
+const mysql = require('mysql2')
 const pool = mysql.createPool({
     
     host: sql.host,

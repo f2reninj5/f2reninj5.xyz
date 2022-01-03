@@ -9,13 +9,16 @@
 	<body>
 		
 		<%- include('partials/header') %>
-
-		<!-- <form method="POST" action="/"><input type="submit"></form> -->
+		
+		<iframe width="400px" height="450px" src="https://editor.p5js.org/FN/full/bayxGPQYi"></iframe>
 
 		<div class="container">
 
 			<h1 style="font-size: 100px;">GET OUT</h1>
 			<p><%= 'GET OUT '.repeat(1000) %></p>
 		</div>
+
+		<%- include(`${partialsDir}/jquery`) %>
+		<script defer src="scripts/home.js"></script>
 	</body>
 </html>
