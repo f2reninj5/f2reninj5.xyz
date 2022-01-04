@@ -1,27 +1,27 @@
 @font-face {
 
     font-family: "Ubuntu Mono";
-    src: url("fonts/Ubuntu_Mono/Regular.ttf");
+    src: url("/fonts/Ubuntu_Mono/Regular.ttf");
 }
 
 @font-face {
 
     font-family: "Ubuntu Mono";
-    src: url("fonts/Ubuntu_Mono/Bold.ttf");
+    src: url("/fonts/Ubuntu_Mono/Bold.ttf");
     font-weight: bold;
 }
 
 @font-face {
 
     font-family: "Ubuntu Mono";
-    src: url("fonts/Ubuntu_Mono/Italic.ttf");
+    src: url("/fonts/Ubuntu_Mono/Italic.ttf");
     font-style: italic;
 }
 
 @font-face {
 
     font-family: "Ubuntu Mono";
-    src: url("fonts/Ubuntu_Mono/BoldItalic.ttf");
+    src: url("/fonts/Ubuntu_Mono/BoldItalic.ttf");
     font-weight: bold;
     font-style: italic;
 }
@@ -31,9 +31,17 @@
 	font-family: Ubuntu Mono;
 }
 
+*::selection {
+
+	color: white;
+	background-color: firebrick;
+}
+
 body {
 
 	margin: 0;
+
+	background-color: whitesmoke;
 }
 
 header, footer {
@@ -48,36 +56,89 @@ header *, footer * {
 	vertical-align: middle;
 }
 
-header ul {
+button:hover {
 
-	list-style-type: none;
-	margin: 0;
+	cursor: pointer;
 }
 
-li a {
+.icon {
 
-	display: block;
-	width: 10vw;
-	text-decoration: none;
-	color: white;
-	text-align: center;
-	padding: 1vw;
-	background-color: indianred;
-	border-radius: 0.1em;
+	background-color: transparent;
+
+	border-style: none;
 }
 
 /* header */
 
 #skip-navigation {
 
+	padding: 0.5em;
+
+	color: white;
+	background-color: indianred;
+
+	border-radius: 0.1em;
+
 	position: absolute;
+	transform: translateY(-120%);
 	filter: opacity(0%);
 	transition: 500ms;
 }
 
 #skip-navigation:focus {
 
+	transform: translateY(0);
 	filter: opacity(100%);
+}
+
+#header-content {
+
+	white-space: nowrap;
+}
+
+#navigation-hamburger {
+
+	float: right;
+}
+
+#navigation-hamburger-list {
+
+	max-height: 0;
+	
+	overflow: hidden;
+
+	transition: 0.2s;
+}
+
+/* navigation bar */
+
+li a {
+
+	display: block;
+	
+	padding: 1em;
+	
+	color: white;
+	background-color: indianred;
+	
+	text-decoration: none;
+	text-align: center;
+	
+	border-radius: 0.1em;
+}
+
+/*  */
+
+header ul {
+
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+	column-gap: 1em;
+
+	margin: 0;
+
+	list-style-type: none;
 }
 
 header li a:hover {
@@ -86,15 +147,47 @@ header li a:hover {
 	color: indianred;
 }
 
+/* navigation hamburger list */
+
+#navigation-hamburger-list ul {
+
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+#navigation-hamburger-list li {
+
+	width: 100%;
+}
+
+#navigation-hamburger-list li a {
+
+	border-radius: 0;
+}
+
+#navigation-hamburger-list li a:hover {
+
+	background-color: white;
+	color: indianred;
+}
+
+/* containers */
+
 .container, .row-container {
 
 	margin: 4em 4vw 4em 4vw;
 	padding: 1em;
 
-	background-color: salmon;
-	color: white;
+	background-color: white;
+	color: black;
 
+	border-color: gainsboro;
+	border-style: solid;
 	border-radius: 1em;
+
+	overflow-wrap: break-word;
 }
 
 .row-container {
@@ -104,6 +197,8 @@ header li a:hover {
 	row-gap: 1em;
 }
 
+/* blog */
+
 .post-preview{
 
 	padding: 1em;
@@ -111,6 +206,8 @@ header li a:hover {
 	background-color: white;
 	color: black;
 
+	border-color: salmon;
+	border-style: solid;
 	border-radius: 0.5em;
 }
 
@@ -130,12 +227,12 @@ header li a:hover {
 
 .post-preview .title:visited {
 
-	color: salmon;
+	color: indianred;
 }
 
 .post-preview .title:hover {
 
-	color: indianred;
+	color: salmon;
 }
 
 .post-preview .brief, .post-preview .details {
@@ -155,10 +252,4 @@ header li a:hover {
 
 	display: grid;
 	flex: 1;
-}
-
-*::selection {
-
-	color: white;
-	background-color: indianred;
 }

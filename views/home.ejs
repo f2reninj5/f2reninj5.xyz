@@ -1,6 +1,8 @@
 <html lang="en">
+
 	<head>
-		<%- include('partials/meta') %>
+
+		<%- include(`${partialsDir}/meta`) %>
 
 		<title>f2reninj5</title>
 		<icon src="images/logo.svg"></icon>
@@ -8,17 +10,18 @@
 
 	<body>
 		
-		<%- include('partials/header') %>
-		
-		<iframe width="400px" height="450px" src="https://editor.p5js.org/FN/full/bayxGPQYi"></iframe>
+		<%- include(`${partialsDir}/header`) %>
 
-		<div class="container">
+		<div id="main-content" class="container">
+
+			<a href="https://github.com/f2reninj5/f2reninj5.xyz">https://github.com/f2reninj5/f2reninj5.xyz</a><br><br>
+
+			<iframe src="https://editor.p5js.org/FN/full/bayxGPQYi"></iframe>
 
 			<h1 style="font-size: 100px;">GET OUT</h1>
 			<p><%= 'GET OUT '.repeat(1000) %></p>
 		</div>
 
-		<%- include(`${partialsDir}/jquery`) %>
 		<script defer src="scripts/home.js"></script>
 	</body>
 </html>

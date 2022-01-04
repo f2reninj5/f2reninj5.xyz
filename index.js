@@ -1,6 +1,4 @@
 
-// https://youtu.be/AryZSCeKU9Y
-
 const path = require('path')
 const express = require('express')
 const app = express()
@@ -16,12 +14,6 @@ app.set('view engine', 'ejs')
 
 app.get('/', (request, response) => {
 
-	response.render('home')
-})
-
-app.post('/', (request, response) => {
-
-	console.log('Post')
 	response.render('home')
 })
 
