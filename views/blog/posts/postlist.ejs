@@ -12,14 +12,14 @@
 
             <div class="tags">
  
-                <p>stuff, gaming, css, python, fun, #timetotroll, stuff, gaming, css, python, fun, #timetotroll, stuff, gaming, css, python, fun, #timetotroll, stuff, gaming, css, python, fun, #timetotroll</p>
+                <p><%= post.formattedTags %></p>
             </div>
         </div>
         
         <div class="details">
 
-            <p><%= `${post.created_at.toLocaleDateString()} ${post.created_at.toLocaleTimeString()}` %></p>
-            <p><%= post.views %> views</p>
+            <p><%= post.meta.formattedCreatedAt %></p>
+            <p><%= post.meta.views %> views</p>
         </div>
     </div>
 <% } %>

@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
-	
+
 	<head>
 
 		<%- include(`${partialsDir}/meta`) %>
@@ -15,7 +16,13 @@
 			
 			<h1><%= locals.post.title %></h1>
 			<h2><%= locals.post.subtitle %></h2>
-			<h4><%= locals.post.views %> views<br>Created at <%= locals.post.created_at.toLocaleDateString() %> <%= locals.post.created_at.toLocaleTimeString() %></h4>
+			<h3><%= locals.post.formattedTags %> </h3>
+
+			<div style="display: flex; flex-direction: row; justify-content: space-between;">
+
+				<h4 style="margin: 0;">Created at <%= locals.post.meta.formattedCreatedAt %></h4>
+				<h4 style="margin: 0;"><%= locals.post.meta.views %> views</h4>
+			</div>
 
 			<p style="padding: 0 1em 0 1em;"><%= locals.post.content %></p>
 		</div>

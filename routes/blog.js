@@ -8,38 +8,31 @@ router.get('/', (request, response) => {
 	response.render('blog/main')
 })
 
-router.get('/posts/fetchpostlist', async (request, response) => {
+router.get('/posts/postlist', async (request, response) => {
 
-	let posts = await fn.queryPool(`SELECT id, title, subtitle, views, created_at FROM blogs ORDER BY created_at DESC`)
+	try {
 
-	response.render('blog/posts/fetchpostlist', {
+		let posts = await fn.Blog.fetchBlogPosts()
 
-		posts: posts
-	})
+		response.render('blog/posts/postlist', {
+
+			posts: posts
+
+		})
+
+	} catch (err) {
+
+		console.log(err)
+		response.send(err)
+	}
+	
 })
 
 router.get('/posts/:id', async (request, response) => {
 
 	try {
 
-		let postId = parseInt(request.params.id)
-
-		if (Number.isNaN(postId)) {
-
-			throw 'non-integer post id was given'
-		}
-
-		let post = (await fn.queryPool(`SELECT id, title, subtitle, content, views, created_at FROM blogs WHERE id = ${postId}`).catch(err => {
-
-			console.log(err)
-			throw 'something went wrong when querying the database'
-
-		}))[0]
-
-		if (!post) {
-
-			throw `failed to find post with id ${postId}`
-		}
+		let post = await fn.Blog.fetchBlogPost(request.params.id)
 
 		response.render('blog/posts/post', {
 
@@ -48,8 +41,8 @@ router.get('/posts/:id', async (request, response) => {
 
 	} catch (err) {
 
+		console.log(err)
 		response.send(err)
-		return
 	}
 })
 

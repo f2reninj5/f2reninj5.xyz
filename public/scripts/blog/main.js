@@ -1,5 +1,5 @@
 
 $(() => {
 
-    $('#main-content').load('/blog/posts/fetchpostlist')
+    $('#main-content').load('/blog/posts/postlist')
 })

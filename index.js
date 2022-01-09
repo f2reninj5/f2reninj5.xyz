@@ -36,5 +36,5 @@ app.get('/about', (request, response) => {
 
 let server = app.listen(80, () => {
 
-	console.log(`Listening at http://localhost.`)
+	console.log(`Listening at http://localhost/.`)
 })
