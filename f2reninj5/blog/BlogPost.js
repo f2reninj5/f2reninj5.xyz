@@ -11,7 +11,7 @@ module.exports = class BlogPost {
 
         this.tags = rows.map(row => {
             
-            return (row.tag_id? { id: row.tag_id, name: row.tag_name } : null)
+            return (row.tag_id ? { id: row.tag_id, name: row.tag_name } : null)
         })
 
         this.meta = {

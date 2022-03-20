@@ -21,10 +21,12 @@
 			<div style="display: flex; flex-direction: row; justify-content: space-between;">
 
 				<h4 style="margin: 0;">Created at <%= locals.post.meta.formattedCreatedAt %></h4>
-				<h4 style="margin: 0;"><%= locals.post.meta.views %> views</h4>
+				<h4 style="margin: 0;"><%= locals.post.meta.views.toLocaleString() %> views</h4>
 			</div>
 
 			<p style="padding: 0 1em 0 1em;"><%= locals.post.content %></p>
 		</div>
+
+		<script defer src="/scripts/blog/post.js"></script>
 	</body>
 </html>
