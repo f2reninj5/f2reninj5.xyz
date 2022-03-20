@@ -2,3 +2,4 @@ tokens.json
 .vscode/launch.json
 node_modules/
 logs/
+config.json
