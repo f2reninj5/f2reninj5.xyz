@@ -36,6 +36,11 @@ app.get('/about', (request, response) => {
 	response.render('about')
 })
 
+app.get('/pirate', (request, response) => {
+
+	response.render('pirate')
+})
+
 let server = app.listen(port, () => {
 
 	console.log(`Listening at http://localhost/.`)
