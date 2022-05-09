@@ -9,29 +9,56 @@
 	</head>
 
 	<body>
-		
-		<%- include(`${partialsDir}/header`) %>
 
-		<div id="main-content" class="container">
+		<img id="background" src="/images/background.svg">
 
-			<a href="https://github.com/f2reninj5/f2reninj5.xyz">https://github.com/f2reninj5/f2reninj5.xyz</a><br><br>
+		<img id="logo" src="/images/name_logo.svg">
 
-			<iframe src="https://editor.p5js.org/FN/full/bayxGPQYi"></iframe>
+		<style>
 
-			<h1 style="font-size: 100px;">Welcome to f2reninj5</h1>
-			<p style="width: 80%; margin: auto; font-size: 1.2rem;">
+			#background {
 
-				Hi. I do code stuff and am gonna try to blog eventually.<br>
-				I'm an A Level student studying Computer Science, Further Maths, Maths, and Product Design. Additionally, I'm a fan of recreational concepts like esoteric programming languages, and maths similar to that covered by <a href="https://www.numberphile.com/">Numberphile</a>, <a href="https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A">Matt Parker</a>, etc.<br>
-				<br>
-				Visit my projects <a href="/projects">here</a>. Here is a link to <a href="https://alan.f2reninj5.xyz">my Computer Science NEA Project</a>.<br>
-				<br>
-				I am also working on an online tool for The Pirate Game that many maths teachers love to play with their class.<br>
-				<br>
-				<br>
-				TBH, I just tried to write some waffle down here so that my website can show up on Google.
-			</p>
-		</div>
+				position: absolute;
+				width: 100%;
+				top: 2em;
+				z-index: -1;
+			}
+
+			#logo {
+				
+				display: block;
+				width: 40%
+			}
+
+			@media only screen and (orientation: landscape) {
+
+				#logo {
+	
+					float: right;
+					margin: 40vmin 10em auto auto;
+				}
+			}
+
+			@media screen and (orientation: portrait) {
+
+				#logo {
+					
+					margin: 10em auto auto auto;
+				}
+			}
+
+			::-webkit-scrollbar {
+
+				width: 1em;
+				
+				background-color: #212121;
+			}
+
+			::-webkit-scrollbar-thumb {
+
+				background-color: #ffb70d;
+			}
+		</style>
 
 		<script defer src="/scripts/home.js"></script>
 	</body>

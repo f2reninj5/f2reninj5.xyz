@@ -41,7 +41,7 @@ body {
 
 	margin: 0;
 
-	background-color: whitesmoke;
+	background: #404040 linear-gradient(#404040, #212121) fixed center no-repeat;
 }
 
 header, footer {
