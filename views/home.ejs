@@ -10,18 +10,79 @@
 
 	<body>
 
-		<img id="background" src="/images/background.svg">
-
+		<div id="b">
+	
+			<img id="background" src="/images/background.svg">
+	
+			<footer>
+	
+				<span class="footer-navigation-list">
+				
+				    <a href="/">Home</a>
+				    <a href="/projects">Projects</a>
+				    <a href="/blog">Blog</a>
+				    <a href="/contact">Contact</a>
+				    <a href="/about">About</a>
+				    <a href="/pirate">Pirate Game</a>
+				</span>
+			</footer>
+		</div>
+		
 		<img id="logo" src="/images/name_logo.svg">
-
+		
 		<style>
 
-			#background {
+			.footer-navigation-list {
+
+				display: flex;
+				justify-content: center;
+
+				vertical-align: middle;
+			}
+			
+			a {
+
+				margin: auto 1em auto 1em;
+
+				color: #ffb70d;
+			}
+
+			footer {
+
+				display: inline-grid;
+				grid-auto-flow: column;
+				grid-auto-rows: 1fr;
+
+				background-color: #212121;
+				
+				position: relative;
+
+				padding: 0;
+
+				width: 100%;
+				height: 16em;
+
+				bottom: 0;
+
+				border: solid #ffb70d;
+				border-width: 1vmin 0 0 0;
+
+				text-align: center;
+			}
+
+			#b {
 
 				position: absolute;
 				width: 100%;
-				top: 2em;
 				z-index: -1;
+			}
+			
+			#background {
+
+				position: relative;
+				
+				width: 100%;
+				top: 2em;
 			}
 
 			#logo {
@@ -37,6 +98,11 @@
 					float: right;
 					margin: 40vmin 10em auto auto;
 				}
+
+				.footer-navigation-list {
+
+					flex-direction: row;
+				}
 			}
 
 			@media screen and (orientation: portrait) {
@@ -44,6 +110,11 @@
 				#logo {
 					
 					margin: 10em auto auto auto;
+				}
+
+				.footer-navigation-list {
+
+					flex-direction: column;
 				}
 			}
 
