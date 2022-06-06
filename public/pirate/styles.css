@@ -90,6 +90,18 @@ button:hover {
     gap: 0.5em;
 }
 
+#download-box {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#download-box img {
+
+    height: 8em;
+}
+
 .player {
 
     justify-content: space-between;
