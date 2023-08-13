@@ -36,10 +36,7 @@ app.get('/about', (request, response) => {
 	response.render('about')
 })
 
-app.get('/pirate', (request, response) => {
-
-	response.render('pirate')
-})
+app.use(express.static('pirate'))
 
 let server = app.listen(port, () => {
 
